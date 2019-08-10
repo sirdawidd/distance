@@ -19,3 +19,5 @@ docker-compose up -d
 
 
 #Improvments
+-add validation layer instead base on slim regexp values(error message is less clear)
+-add more tests
