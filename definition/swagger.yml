@@ -1,0 +1,54 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: calculator
+  termsOfService: Later
+servers:
+  - url: 'http://localhost:8000/'
+    description: The local docker API server
+
+paths:
+  '/distance/{unit}/add/{firstDistance}/{firstUnit}/{secondDistance}/{secondUnit}':
+    get:
+      parameters:
+        - in: path
+          name: unit
+          description: Response unit type
+          required: true
+          schema:
+            type: string
+            example: fbkiobjiojbfdbiokfdb
+        - in: path
+          name: firstDistance
+          description: First distane
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - in: path
+          name: firstUnit
+          description: First unit
+          required: true
+          schema:
+            type: string
+            example: fbkiobjiojbfdbiokfdb
+        - in: path
+          name: secondDistance
+          description: Second distane
+          required: true
+          schema:
+            type: integer
+            example: 1
+        - in: path
+          name: secondUnit
+          description: Second distane
+          required: true
+          schema:
+            type: string
+            example: fbkiobjiojbfdbiokfdb
+      responses:
+        '200':
+          description: Successful verification
+
+        '500':
+          description: Internal server error
