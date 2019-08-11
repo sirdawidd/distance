@@ -49,6 +49,18 @@ paths:
       responses:
         '200':
           description: Successful verification
-
+          content:
+            application/json:
+              schema:
+                type: "object"
+                  properties:
+                    accessToken:
+                      description: Access token
+                      example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                      type: string
+                    refreshToken:
+                      description: Refresh token
+                      example: 89de894ef489f894de894de
+                      type: string
         '500':
           description: Internal server error
