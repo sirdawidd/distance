@@ -23,6 +23,18 @@ BTW it is possible to run app in docker.
 docker-compose up -d
 ~~~
 
+## Tests
+
+Run tests
+```
+$ vendor/bin/phpunit
+```
+
+Run tests with coverage (will be generated in coverage/ folder)
+```
+$ vendor/bin/phpunit --coverage-html=coverage
+```
+
 ## Improvments
 
 -add validation layer instead base on slim regexp values(error message is less clear)
